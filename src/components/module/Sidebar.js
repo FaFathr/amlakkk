@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles from "./SideBar.module.css"
 import Link from "next/link";
 import { HiFilter } from "react-icons/hi";
@@ -14,6 +14,7 @@ function Sidebar() {
       <Link href="/buy-residential">همه</Link>
       {Object.keys(categories).map((i) => (
         <Link
+        key={i}
           href={{
             pathname: "/buy-residential",
             query: { category: i },
